@@ -28,8 +28,8 @@ where <code>####</code> is the number of points to be sampled from the surface o
 
 # <sub>Training
 To train a model with the parsed data, simply run the <code>train.py</code> script with the following arguments:
-  - model: string data type that can be either <code>pointnet</code>, <code>pointnet++_ssg</code>, or <code>pointnet++_msg</code>
-  - epochs: integer defining the number of training epochs
+  - **model:** string data type that can be either <code>pointnet</code>, <code>pointnet++_ssg</code>, or <code>pointnet++_msg</code>
+  - **epochs:** integer defining the number of training epochs
   - batch_size: intereger defining the size of each batch of data (default=16)
   - num_points: integer defining the number of points sampled from each cluster's surface model and MUST be same with parser (default=500)
   - bn: boolean defining whether batch normalization is applied (default=True)
