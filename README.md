@@ -30,12 +30,14 @@ where <code>####</code> is the number of points to be sampled from the surface o
 To train a model with the parsed data, simply run the <code>train.py</code> script with the following arguments:
   - **model:** string data type that can be either <code>pointnet</code>, <code>pointnet++_ssg</code>, or <code>pointnet++_msg</code>
   - **epochs:** integer defining the number of training epochs
-  - batch_size: intereger defining the size of each batch of data (default=16)
-  - num_points: integer defining the number of points sampled from each cluster's surface model and MUST be same with parser (default=500)
-  - bn: boolean defining whether batch normalization is applied (default=True)
-  - momentum: float defining the momentum in batch normalization (default=0.99)
-  - dropout: float defining the keep probabilify for dropout layers (default=0.3)
-  - lr: float defining the learning rate (default=0.001)
-  - logdir: directory to save the trained models in the folder called <code>logs</code>
+  - **batch_size:** intereger defining the size of each batch of data (default=16)
+  - **num_points:** integer defining the number of points sampled from each cluster's surface model and MUST be same with parser (default=500)
+  - **bn:** boolean defining whether batch normalization is applied (default=True)
+  - **momentum:** float defining the momentum in batch normalization (default=0.99)
+  - **dropout:** float defining the keep probabilify for dropout layers (default=0.3)
+  - **lr:** float defining the learning rate (default=0.001)
+  - **logdir:** directory to save the trained models in the folder called <code>logs</code> (default=the selected model name)
 
+Here is an example for training a PointNet++ model with Multi-Scale Grouping (MSG) for 100 epochs and the default settings:
+  <pre><code>python train.py --model pointnet++_msg --epochs 100</code></pre>
 
