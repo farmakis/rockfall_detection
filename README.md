@@ -41,3 +41,10 @@ To train a model with the parsed data, simply run the <code>train.py</code> scri
 Here is an example for training a PointNet++ model with Multi-Scale Grouping (MSG) for 100 epochs and the default settings:
   <pre><code>python train.py --model pointnet++_msg --epochs 100</code></pre>
 
+The weights of every epoch are saved in the <code>logs</code> folder under the subfolder named by the <code>logdir</code> input argument (<code>pointnet++_msg</code> in the example above as it uses the defaults value).
+  
+The training logs can also be viewed by executing:
+<pre><code>tensorboard --logdir=logs</code></pre>
+and navigate to <code>http://localhost:6006/</code> in a web browser.
+  
+
