@@ -22,7 +22,7 @@ tf_ops/compile_ops.sh
 The training data for the models should represent individual deformation clusters resulted from point cloud based change detection after de-noising, clustering, and meshing. Details on the data generation workflow are provided [here](https://www.mdpi.com/2220-9964/10/3/157). When both <code>rockfall</code>  and <code>non_rockfall</code> data are available in <code>.off</code> format and split into <code>train</code>, <code>dev</code>, <code>test</code> sets, copy them in the respective folders following the steps below:
   1) Create a folder called <code>data</code>
   2) In <code>data</code>, create two folders named <code>rockfall</code> and <code>non_rockfall</code>
-  3) In each of folders created in (2), create 3 folders named <code>train</code>, <code>dev</code>, and <code>test</code> and copy the <code>.off</code>       file there in
+  3) In each of the folders created in (2), create 3 folders named <code>train</code>, <code>dev</code>, and <code>test</code> and copy the <code>.off</code>       file there in
 
 Now, you are ready to parse the date into TensorFlow records by executing:
 <pre><code>python parser.py --num_points ####
