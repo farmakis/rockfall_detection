@@ -24,10 +24,18 @@ The training data for the models should represent individual deformation cluster
 Now, you are ready to parse the date into TensorFlow records by executing:
 <pre><code>python parser.py --num_points ####
 </code></pre>
-where <code>####</code> is the number of points to be sampled from the surface of each deformation cluster and defaults to 500.
+where <code>####</code> is the number of points to be sampled from the surface of each deformation cluster (default=500).
 
-# <sub>Usage
-
-
+# <sub>Training
+To train a model with the parsed data, simply run the <code>train.py</code> script with the following arguments:
+  - model: string data type that can be either <code>pointnet</code>, <code>pointnet++_ssg</code>, or <code>pointnet++_msg</code>
+  - epochs: integer defining the number of training epochs
+  - batch_size: intereger defining the size of each batch of data (default=16)
+  - num_points: integer defining the number of points sampled from each cluster's surface model and MUST be same with parser (default=500)
+  - bn: boolean defining whether batch normalization is applied (default=True)
+  - momentum: float defining the momentum in batch normalization (default=0.99)
+  - dropout: float defining the keep probabilify for dropout layers (default=0.3)
+  - lr: float defining the learning rate (default=0.001)
+  - logdir: directory to save the trained models in the folder called <code>logs</code>
 
 
