@@ -12,7 +12,7 @@ The following python modules should also be included:
   - Open3D 0.13.0
   - trimesh
 
-To compile the TensorFlow operations make sure the <pre>CUDA_ROOT</pre> path in <pre>tf_ops/compile_ops.sh</pre> points to the correct DUCA installation folder in your machine. Then compile the operations by executing the following commands in the project's directory:
+To compile the TensorFlow operations make sure the <code>CUDA_ROOT</code> path in <code>tf_ops/compile_ops.sh</code> points to the correct DUCA installation folder in your machine. Then compile the operations by executing the following commands in the project's directory:
 
 <pre><code>chmod u+x tf_ops/compile_ops.sh
 tf_ops/compile_ops.sh
