@@ -14,8 +14,9 @@ The following python modules should also be included:
 
 To compile the TensorFlow operations make sure the CUDA_ROOT path in  tf_ops/compile_ops.sh  points to the correct DUCA installation folder in your machine. Then compile the operations by executing the following commands in the project's directory:
 
-  chmod u+x tf_ops/compile_ops.sh
-  tf_ops/compile_ops.sh
+<pre><code>chmod u+x tf_ops/compile_ops.sh
+tf_ops/compile_ops.sh
+</code></pre>
 
 
 
