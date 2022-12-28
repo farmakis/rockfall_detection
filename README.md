@@ -9,7 +9,7 @@ The implementations in the associated [paper](https://www.sciencedirect.com/scie
   - cuda 10.1
 
 The following python modules should also be included:
-  - Open3D 0.13.0
+  - open3d 0.13.0
   - trimesh
 
 To compile the TensorFlow operations make sure the <code>CUDA_ROOT</code> path in <code>tf_ops/compile_ops.sh</code> points to the correct CUDA installation folder in your machine. Then compile the operations by executing the following commands in the project's directory:
