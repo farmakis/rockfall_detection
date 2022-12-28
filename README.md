@@ -21,6 +21,12 @@ tf_ops/compile_ops.sh
 # <sub>Data preparation
 The training data for the models should represent individual deformation clusters resulted from point cloud based change detection after de-noising, clustering, and meshing. Details on the data generation workflow are provided [here](https://www.mdpi.com/2220-9964/10/3/157). When both <code>rockfall</code>  and <code>non_rockfall</code> data are available in <code>.off</code> format and split into <code>train</code>, <code>dev</code>, <code>test</code> sets, copy them in the respective folders in the <code>data</code> folder.
 
+Now, you are ready to parse the date into TensorFlow records by executing
+<pre><code>python parser.py --num_points xxxx
+</code></pre>
+where <code?xxxx</code> is the number of points to be sampled from the surface of each deformation cluster
+
+# <sub>Usage
 
 
 
