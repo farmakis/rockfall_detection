@@ -45,6 +45,16 @@ The weights of every epoch are saved in the <code>logs</code> folder under the s
   
 The training logs can also be viewed by executing:
 <pre><code>tensorboard --logdir=logs</code></pre>
-and navigate to <code>http://localhost:6006/</code> in a web browser.
+and navigate to <code>http://localhost:6006/</code>.
+
+# <sub>Evaluation
+To evaluate the model on the test dataset, run the <<code>evaluate.py</code> script with the following arguments:
+  - **model:** string data type that can be either <code>pointnet</code>, <code>pointnet++_ssg</code>, or <code>pointnet++_msg</code>
+  - **epoch:** integer defining the epoch which's the trained weights will be used to make predictions
+  - **batch_size:** intereger defining the size of each batch of data (default=16)
+  - **num_points:** integer defining the number of points sampled from each cluster's surface model and MUST be same with parser (default=500)
+  - **logdir:** directory of the saved trained models in the folder called <code>logs</code> (default=the selected model name)
   
+Here is an example for evaluating the performance of the above PointNet++_MSG model on the 50th epoch:
+  <pre><code>python evaluate.py --model pointnet++_msg --epoch 50</code></pre>
 
