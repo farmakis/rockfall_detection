@@ -59,7 +59,7 @@ def parser(num_points):
 if __name__ == '__main__':
 
     inputs = argparse.ArgumentParser()
-    inputs.add_argument("-num_points", type=int, default=500,
+    inputs.add_argument("--num_points", type=int, default=500,
                         help="Number of points sampled from each cluster's surface model")
     args = inputs.parse_args()
 
