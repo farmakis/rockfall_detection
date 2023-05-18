@@ -24,7 +24,7 @@ The training data for the models should represent individual deformation cluster
   2) In <code>data</code>, create two folders named <code>rockfall</code> and <code>non_rockfall</code>
   3) In each of the folders created in (2), create 3 folders named <code>train</code>, <code>dev</code>, and <code>test</code> and copy the <code>.off</code>       file there in
 
-Now, you are ready to parse the date into TensorFlow records by executing:
+Now, you are ready to parse the data into TensorFlow records by executing:
 <pre><code>python parser.py --num_points ####
 </code></pre>
 where <code>####</code> is the number of points to be sampled from the surface of each deformation cluster (default=500).
